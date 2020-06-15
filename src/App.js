@@ -9,28 +9,24 @@ class App extends Component{
   }
 
   navbarClick(){
-    console.log(this.myRef.current.classList.toggle('active'));
+    this.myRef.current.classList.toggle("active");
   }
 
   render(){
     return (
       <nav className="navbar">
-        <span className="navbar-toggle">
-        <i onClick={this.navbarClick} className="box-shadow-menu"></i>
-        </span>
-    <a className="logo">Lunch Mates</a>
-    <ul ref={this.myRef} className="main-nav">
-      <li>
-        <a className="nav-links">View</a>
-      </li>
-      <li>
-        <a className="nav-links">Schedule new</a>
-      </li>
-      <li>
-        <a className="nav-links">Participation history</a>
-      </li>
-    </ul>
-  </nav>
+        <span role="img" aria-label="hamburger" className="logo">Lunch Mates &#127828;</span>
+        <div className="menu">
+          <span className="navbar-toggle">
+            <i onClick={this.navbarClick} className="box-shadow-menu"></i>
+          </span>
+          <ul ref={this.myRef} className="main-nav">
+            <li className="nav-links">View</li>
+            <li className="nav-links">Schedule new</li>
+            <li className="nav-links">Participation history</li>
+          </ul>
+        </div>
+      </nav>
    )
   }
 
