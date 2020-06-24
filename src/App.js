@@ -18,7 +18,7 @@ class Lunchs extends Component {
   constructor(props){
     super(props);
     this.generateLunches();
-    this.expandOrCloseParticipants.bind(this);
+    //this.expandOrCloseParticipants();
   }
   lunchs
 
@@ -42,13 +42,15 @@ class Lunchs extends Component {
     return (
       this.lunchs.map(lunch =>{
         return (
-          <ul className="lunch">
-            <li>{lunch.place}</li>
-            <li>{lunch.address}</li>
-            <li>{lunch.datetime}</li>
-            <li><text onClick={ e => this.expandOrCloseParticipants(e.target)}>Participants</text> Count: {lunch.participants.length}</li>
-            <li class="content"><text>Hello World!</text></li>
-          </ul>
+          <div className="lunchBlock">
+            <ul className="lunch">
+              <li>{lunch.place}</li>
+              <li>{lunch.address}</li>
+              <li>{lunch.datetime}</li>
+              <li className="participant"><a onClick={ e => this.expandOrCloseParticipants(e.target)}>Participants</a><span className="count"> Count: {lunch.participants.length}</span></li>
+              <li className="content">Hello World</li>
+            </ul>
+          </div>
         )
       })
     )
