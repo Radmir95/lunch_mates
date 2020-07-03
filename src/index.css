@@ -64,6 +64,10 @@ body {
   border-bottom: 1px solid #ddd;
 }
 
+.part li:hover{
+  background-color: #e8f2f5;
+}
+
 .lunchBlock .participant{
   color: #007bff;
 }
