@@ -1,12 +1,10 @@
 import React, {Component} from 'react'
 import {Lunch, LunchModel} from './Lunch'
+import data from './placesData.json'
 
 class Lunchs extends Component {
     getLunches(){
-      this.lunchs = [
-        new LunchModel("Place1", "Address1", "Datetime1", ["Viktor", "Viktor1"]),
-        new LunchModel("Place2", "Address2", "Datetim2", ["Ahmed", "Ahmed1"])
-      ];
+        this.lunchs = data["lunches"];
     }
   
     render(){
