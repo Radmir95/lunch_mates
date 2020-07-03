@@ -34,10 +34,8 @@ body {
   font-size: 24px;
 }
 
-.content {
-  padding: 0 18px;
+.participants {
   display: none;
-  overflow: hidden;
   background-color: #f1f1f1;
 }
 
@@ -47,21 +45,36 @@ body {
   border: 2px solid #BFC4C8;
   margin-left: 120px;
   margin-right: 120px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .lunch{
   list-style: none;
   margin-left: 20px;
+  margin-right: 18px;
 }
 
-.participant{
+.part{
+  list-style-type: none;
+}
+
+.part li{
+  padding: 4px 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+.lunchBlock .participant{
   color: #007bff;
 }
 
 .count{
+  border-radius: 6px;
+}
+
+.blueBackground{
   background-color: #007bff;
   color: white;
-  border-radius: 6px;
 }
 
 @media screen and (max-width: 990px){
