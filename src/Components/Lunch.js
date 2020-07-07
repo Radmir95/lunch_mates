@@ -4,9 +4,9 @@ class Lunch extends Component{
     expandOrCloseParticipants(target){
       let content = target.parentElement.nextElementSibling;
       if (content.style.display === "block") {
-        content.style.display = "none";
+        content.style.display = "none"
       } else {
-        content.style.display = "block";
+        content.style.display = "block"
       }
     }
   
@@ -22,17 +22,17 @@ class Lunch extends Component{
         })}</ul>
       </li>
       <li><button className="blueBackground">Participate</button></li>
-    </ul>);
+    </ul>)
     }
   }
 
   class LunchModel{
     constructor(place, address, datetime, participants){
-      this.place = place;
-      this.address = address;
-      this.datetime = datetime;
-      this.participants = participants;
+      this.place = place
+      this.address = address
+      this.datetime = datetime
+      this.participants = participants
     }
   }
 
-  export {Lunch, LunchModel};
+  export {Lunch, LunchModel}

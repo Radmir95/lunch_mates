@@ -2,9 +2,9 @@ import React, {Component} from "react"
 
 class Header extends Component{
     constructor(props){
-      super(props);
-      this.navbarClick = this.navbarClick.bind(this);
-      this.myRef = React.createRef();
+      super(props)
+      this.navbarClick = this.navbarClick.bind(this)
+      this.myRef = React.createRef()
     }
   
   
@@ -25,8 +25,8 @@ class Header extends Component{
           <li className="nav-links">Participation history</li>
         </ul>
       </div>
-    </nav>);
+    </nav>)
     }
   }
 
-export default Header;
+export default Header

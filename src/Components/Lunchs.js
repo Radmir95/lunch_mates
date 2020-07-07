@@ -9,7 +9,6 @@ class Lunchs extends Component {
   
     render(){
       this.getLunches();
-  
       return (
         this.lunchs.map(lunch =>{
           return (
@@ -22,4 +21,4 @@ class Lunchs extends Component {
     }
   }
   
-  export default Lunchs;
+  export default Lunchs
