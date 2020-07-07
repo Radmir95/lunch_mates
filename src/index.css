@@ -9,7 +9,6 @@ body {
 }
 
 .navbar {
-  font-size: 16px;
   background-color: #433b6b;
   border: 1px solid rgba(0, 0, 0, 0.2);
   padding-bottom: 6px;
@@ -39,7 +38,7 @@ body {
   background-color: #f1f1f1;
 }
 
-.lunchBlock{
+.lunchCard{
   background: #D9DFE3;
   border-radius: 4px;
   border: 2px solid #BFC4C8;
@@ -55,20 +54,20 @@ body {
   margin-right: 18px;
 }
 
-.part{
+.participant{
   list-style-type: none;
 }
 
-.part li{
+.participant li{
   padding: 4px 16px;
   border-bottom: 1px solid #ddd;
 }
 
-.part li:hover{
+.participant li:hover{
   background-color: #e8f2f5;
 }
 
-.lunchBlock .participant{
+.lunchCard .participantsButton{
   color: #007bff;
 }
 
@@ -99,7 +98,6 @@ body {
       0 0.25em 0 0 black,
       0 0.5em 0 0 black;
   }
-
 
   .navbar{
     display: flex;
