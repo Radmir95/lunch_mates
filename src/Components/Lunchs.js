@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
-import {Lunch, LunchModel} from './Lunch'
-import data from './placesData.json'
+import {Lunch} from './Lunch'
+import data from './../placesData.json'
 
 class Lunchs extends Component {
     getLunches(){
