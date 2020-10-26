@@ -1,11 +1,8 @@
 * {
+  font-family: "Josefin Sans", sans-serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-
-body {
-  font-family: "Josefin Sans", sans-serif;
 }
 
 .navbar {
@@ -54,6 +51,10 @@ body {
   margin-right: 18px;
 }
 
+.lunch li{
+  padding: 3px;
+}
+
 .participant{
   list-style-type: none;
 }
@@ -72,12 +73,15 @@ body {
 }
 
 .count{
+  margin-left: 5px;
   border-radius: 6px;
 }
 
 .blueBackground{
+  border-style: none;
   background-color: #007bff;
   color: white;
+  padding: 4px 4px;
 }
 
 @media screen and (max-width: 990px){
