@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Lunch(){
+function Lunch(props){
     function expandOrCloseParticipants(target){
         let content = target.parentElement.nextElementSibling
         if (content.style.display === "block") {
@@ -9,17 +9,17 @@ function Lunch(){
             content.style.display = "block"
         }
     }
-  
+
     return(
         <ul className="lunch">
-            {/* <li>{this.props.lunch.place}</li>
-            <li>{this.props.lunch.address}</li>
-            <li>{this.props.lunch.datetime}</li> */}
-            {/* <li className="participantsButton"><a onClick={ e => expandOrCloseParticipants(e.target)}>Participants</a><span className="count blueBackground">count: {this.props.lunch.participants.length}</span></li> */}
+            <li>{props.lunch.place}</li>
+            <li>{props.lunch.address}</li>
+            <li>{props.lunch.datetime}</li>
+            <li className="participantsButton"><a onClick={ e => expandOrCloseParticipants(e.target)}>Participants</a><span className="count blueBackground">count: {props.lunch.participants.length}</span></li>
             <li className="participants">
-                {/* <ul className="participant">{this.props.lunch.participants.map((participant, key)=>{
+                <ul className="participant">{props.lunch.participants.map((participant, key)=>{
                     return <li key={key}>{participant}</li>
-                })}</ul> */}
+                })}</ul>
             </li>
             <li><button className="blueBackground">Participate</button></li>
         </ul>)

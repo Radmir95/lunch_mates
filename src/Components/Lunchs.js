@@ -6,9 +6,9 @@ function Lunchs(){
     const lunchInfomration = data["lunches"]
 
     return (
-        lunchInfomration.map(lunch =>{
+        lunchInfomration.map((lunch, i) =>{
             return(
-                <div className="lunchCard">
+                <div className="lunchCard" key={i}>
                     <Lunch lunch={lunch}/>
                 </div>)
         })

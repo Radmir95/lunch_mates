@@ -2,8 +2,10 @@ import React from 'react'
 
 function Header(){
     function navbarClick(){
-        //myRef.current.classList.toggle("active");
+        myRef.current.classList.toggle("active");
     }
+
+    const myRef = React.createRef()
 
     return(
         <nav className="navbar">
@@ -12,7 +14,7 @@ function Header(){
                 <span className="navbar-toggle">
                     <i onClick={navbarClick} className="box-shadow-menu"></i>
                 </span>
-                <ul className="main-nav">
+                <ul ref={myRef} className="main-nav">
                     <li className="nav-links">View</li>
                     <li className="nav-links">Schedule new</li>
                     <li className="nav-links">Participation history</li>
