@@ -1,11 +1,11 @@
-import React, {Component} from 'react'
+import React from 'react'
 import Lunchs from './Lunchs'
 
-export default class Main extends Component{
-    render(){
-        return (
-            <div>
-                <Lunchs/>
-            </div>)
-    }
+function Main(){
+    return (
+        <div>
+            <Lunchs/>
+        </div>)
 }
+
+export default Main
