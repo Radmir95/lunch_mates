@@ -1,8 +1,8 @@
 import React from 'react'
 
 function Lunch(props){
-    function expandOrCloseParticipants(target){
-        let content = target.parentElement.nextElementSibling
+    function toogleParticipants(target){
+        const content = target.parentElement.nextElementSibling
         if (content.style.display === "block") {
             content.style.display = "none"
         } else {
@@ -15,7 +15,7 @@ function Lunch(props){
             <li>{props.lunch.place}</li>
             <li>{props.lunch.address}</li>
             <li>{props.lunch.datetime}</li>
-            <li className="participantsButton"><a onClick={ e => expandOrCloseParticipants(e.target)}>Participants</a><span className="count blueBackground">count: {props.lunch.participants.length}</span></li>
+            <li className="participantsButton"><a onClick={ e => toogleParticipants(e.target)}>Participants</a><span className="count blueBackground">count: {props.lunch.participants.length}</span></li>
             <li className="participants">
                 <ul className="participant">{props.lunch.participants.map((participant, key)=>{
                     return <li key={key}>{participant}</li>
