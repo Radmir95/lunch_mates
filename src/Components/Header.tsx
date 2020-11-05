@@ -1,11 +1,11 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 const Header = () => {
     function navbarClick(){
-        myRef.current.classList.toggle("active");
+        state ? setState(false) : setState(true)
     }
 
-    const myRef : any = React.createRef()
+    const [state, setState] = useState(true)
 
     return(
         <nav className="navbar">
@@ -14,7 +14,7 @@ const Header = () => {
                 <span className="navbar-toggle">
                     <i onClick={navbarClick} className="box-shadow-menu"></i>
                 </span>
-                <ul ref={myRef} className="main-nav">
+                <ul className={state ? "main-nav" : "main-nav active"}>
                     <li className="nav-links">View</li>
                     <li className="nav-links">Schedule new</li>
                     <li className="nav-links">Participation history</li>

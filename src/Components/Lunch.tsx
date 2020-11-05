@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 type LunchProps = {
     lunch: {
@@ -10,22 +10,19 @@ type LunchProps = {
 }
 
 const Lunch = ({lunch} : LunchProps) => {
-    function toogleParticipants(target : any){
-        const content = target.parentElement.nextElementSibling
-        if (content.style.display === "block") {
-            content.style.display = "none"
-        } else {
-            content.style.display = "block"
-        }
+    function toogleParticipants(){
+        state ? setState(false) : setState(true)
     }
+
+    const [state, setState] = useState(false)
 
     return(
         <ul className="lunch">
             <li>{lunch.place}</li>
             <li>{lunch.address}</li>
             <li>{lunch.datetime}</li>
-            <li className="participantsButton"><a onClick={ e => toogleParticipants(e.target)}>Participants</a><span className="count blueBackground">count: {lunch.participants.length}</span></li>
-            <li className="participants">
+            <li className="participantsButton"><a onClick={toogleParticipants}>Participants</a><span className="count blueBackground">count: {lunch.participants.length}</span></li>
+            <li style={{display: state ? 'block' : 'none' }} className="participants">
                 <ul className="participant">{lunch.participants.map((participant, key)=>{
                     return <li key={key}>{participant}</li>
                 })}</ul>
